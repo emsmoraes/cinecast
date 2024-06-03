@@ -1,7 +1,7 @@
 import { View, StatusBar } from "react-native";
 import React from "react";
 import { Slot } from "expo-router";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
 import {
   useFonts as useRoboto,
   Roboto_400Regular,
@@ -21,11 +21,11 @@ import {
 } from "@expo-google-fonts/raleway";
 import * as SplashScreen from "expo-splash-screen";
 import "../styles/global.css";
+import { tanstack } from "@/lib/tanstack";
+
 SplashScreen.preventAutoHideAsync();
 
 const Layout = () => {
-  const queryClient = new QueryClient();
-
   const [RobotoFontsLoaded] = useRoboto({
     Roboto_400Regular,
     Roboto_500Medium,
@@ -48,7 +48,7 @@ const Layout = () => {
   }
 
   return (
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={tanstack}>
       <View style={{ flex: 1 }}>
         <StatusBar barStyle="light-content" />
         {RobotoFontsLoaded && RalewayFontsLoaded && <Slot />}

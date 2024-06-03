@@ -3,6 +3,9 @@ import axios from "axios";
 
 export const api = axios.create({
   baseURL: `https://api.themoviedb.org`,
+  params: {
+    language: "pt-BR",
+  },
   headers: {
     "Content-Type": "application/json",
     Authorization:
