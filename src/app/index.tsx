@@ -4,6 +4,7 @@ import { Input } from "@/components/Input";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { router } from "expo-router";
+import { cn } from "@/lib/utils";
 
 const Index = () => {
   const [loading, setLoading] = React.useState(false);
@@ -44,7 +45,12 @@ const Index = () => {
           <Pressable
             disabled={loading}
             onPress={login}
-            className="mt-3 w-full flex-row items-center justify-center gap-2 rounded-2xl bg-primaryRed-900/80 px-4 py-3"
+            className={cn(
+              "mt-3 w-full flex-row items-center justify-center gap-2 rounded-2xl bg-primaryRed-900/80 px-4 py-3",
+              {
+                "bg-red-500/80 text-gray-100/80": loading,
+              },
+            )}
           >
             <Text className="text-center font-ralewaySemiBold text-[16px] text-white">
               {loading ? "Entrando..." : "Entrar"}
