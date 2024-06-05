@@ -15,7 +15,7 @@ const Index = () => {
     setLoading(true);
     setTimeout(() => {
       navigate.push("(tabs)");
-    }, 2000);
+    }, 200);
   };
 
   return (
