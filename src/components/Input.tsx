@@ -8,11 +8,13 @@ export interface InputProps
   label?: string;
   labelClasses?: string;
 }
+
 const Input = forwardRef<React.ElementRef<typeof TextInput>, InputProps>(
-  ({ className, label, labelClasses, ...props }) => (
+  ({ className, label, labelClasses, ...props }, ref) => (
     <View className={cn("flex flex-col gap-1.5")}>
       {label && <Text className={cn("text-base", labelClasses)}>{label}</Text>}
       <TextInput
+        ref={ref}
         className={cn(className, "rounded-lg border px-4 py-2.5")}
         {...props}
       />
