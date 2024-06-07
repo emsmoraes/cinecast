@@ -13,7 +13,7 @@ export function useBestMoviesIndexQuery(
   params: Partial<Query>,
 ): UseQueryResult<MovieResponse, Error | AxiosError> {
   return useQuery({
-    queryKey: ["MOVIE-INDEX", params],
+    queryKey: ["BEST-MOVIE-INDEX", params],
     queryFn: () => fetcher(params),
   });
 }

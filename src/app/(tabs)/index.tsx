@@ -14,6 +14,13 @@ const Index = () => {
 
       <View className="mt-2">
         <Text className="mb-3 mt-2 px-6 font-ralewaySemiBold text-[17px] text-white">
+          Continue de onde parou
+        </Text>
+        <RecommendedMovies />
+      </View>
+
+      <View className="mt-2">
+        <Text className="mb-3 mt-2 px-6 font-ralewaySemiBold text-[17px] text-white">
           Entretenimento garantido
         </Text>
         <RecommendedMovies />
