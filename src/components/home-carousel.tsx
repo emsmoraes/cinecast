@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { useMovieIndexQuery } from "@/queries";
 import React, { useState } from "react";
 import { Dimensions, Image, View } from "react-native";
 import Carousel from "react-native-reanimated-carousel";
@@ -8,17 +7,11 @@ const HomeCarousel = () => {
   const width = Dimensions.get("window").width;
   const [activeSlide, setActiveSlide] = useState(0);
 
-  const { data: movies, isSuccess: isMoodListSuccess } = useMovieIndexQuery({
-    page: 1,
-  });
-
-  console.log(movies, isMoodListSuccess);
-
   const images = [
     "https://i.ytimg.com/vi/PekahRjvVY0/maxresdefault.jpg",
-    "https://i.ytimg.com/vi/PekahRjvVY0/maxresdefault.jpg",
-    "https://i.ytimg.com/vi/PekahRjvVY0/maxresdefault.jpg",
-    "https://i.ytimg.com/vi/PekahRjvVY0/maxresdefault.jpg",
+    "https://revista-cdn.querobolsa.com.br/post_images/43263/46db85992ab53af01159a82b4a7f23b3f0201423.png?1674667002",
+    "https://pipocanamadrugada.com.br/site/wp-content/uploads/2020/08/The-Boys-capa-.jpg",
+    "https://riot-us.com/wp-content/uploads/2024/04/fallout-banner-image.webp?w=1000",
   ];
 
   return (

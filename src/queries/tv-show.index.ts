@@ -1,19 +1,19 @@
-import { MovieResponse } from "@/models/movie.model";
 import { Service } from "@/services";
 import { useQuery } from "@tanstack/react-query";
 import { AxiosError } from "axios";
 import type { UseQueryResult } from "@tanstack/react-query";
 import { Query } from "@/models/params.model";
+import { TvShowResponse } from "@/models/tv-show.model";
 
-async function fetcher(params: Partial<Query>): Promise<MovieResponse> {
-  return await Service.movie.indexTheBest(params);
+async function fetcher(params: Partial<Query>): Promise<TvShowResponse> {
+  return await Service.tvShow.indexTheBest(params);
 }
 
-export function useBestMoviesIndexQuery(
+export function useBestTvShowIndexQuery(
   params: Partial<Query>,
-): UseQueryResult<MovieResponse, Error | AxiosError> {
+): UseQueryResult<TvShowResponse, Error | AxiosError> {
   return useQuery({
-    queryKey: ["MOVIE-INDEX", params],
+    queryKey: ["TV-SHOW-INDEX", params],
     queryFn: () => fetcher(params),
   });
 }
