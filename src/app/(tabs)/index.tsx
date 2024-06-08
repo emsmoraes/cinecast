@@ -3,6 +3,7 @@ import React from "react";
 import HomeCarousel from "@/components/home-carousel";
 import RecommendedMovies from "@/components/recommended-movies";
 import RecommendedTvShows from "@/components/recommended-tv-shows";
+import PlayingAudiovisual from "@/components/playing-audiovisual";
 
 const Index = () => {
   return (
@@ -16,7 +17,7 @@ const Index = () => {
         <Text className="mb-3 mt-2 px-6 font-ralewaySemiBold text-[17px] text-white">
           Continue de onde parou
         </Text>
-        <RecommendedMovies />
+        <PlayingAudiovisual />
       </View>
 
       <View className="mt-2">
