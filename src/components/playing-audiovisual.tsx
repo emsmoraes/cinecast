@@ -18,12 +18,12 @@ const PlayingAudiovisual = () => {
     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       <View className="flex-row gap-4 px-6">
         {isAudiovisualSuccess &&
-          audiovisuals?.results.map((movie) => (
+          audiovisuals?.results.map((audiovisual) => (
             <AudiovisualCard
               isPlaying
               banner
-              audiovisual={movie}
-              key={movie.id}
+              audiovisual={audiovisual}
+              key={audiovisual.id}
             />
           ))}
         {isLoading &&
