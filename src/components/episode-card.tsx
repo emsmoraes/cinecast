@@ -1,5 +1,6 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
+import { EpisodeDetails } from "@/models/tv-show-details.model";
 
 interface EpisodeCardProps {
   episode: EpisodeDetails;
