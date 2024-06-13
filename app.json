@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "native-movies-list",
-    "slug": "native-movies-list",
+    "name": "cine-cast",
+    "slug": "cine-cast",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
