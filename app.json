@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "cine-cast",
-    "slug": "cine-cast",
+    "name": "cinecast",
+    "slug": "cinecast",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
