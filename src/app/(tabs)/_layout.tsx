@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Tabs } from "expo-router";
 import Foundation from "@expo/vector-icons/Foundation";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import theme from "@/theme";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { UserContext } from "@/contexts/UserContext";
 
 const Layout = () => {
+  const { setUserRequest, user } = useContext(UserContext);
+
+  useEffect(() => {
+    if (!user) {
+      setUserRequest();
+    }
+  }, []);
+
   return (
     <Tabs
       screenOptions={{

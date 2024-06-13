@@ -22,6 +22,7 @@ import {
 import * as SplashScreen from "expo-splash-screen";
 import "../styles/global.css";
 import { tanstack } from "@/lib/tanstack";
+import { UserProvider } from "@/contexts/UserContext";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -49,10 +50,12 @@ const Layout = () => {
 
   return (
     <QueryClientProvider client={tanstack}>
-      <View style={{ flex: 1 }}>
-        <StatusBar barStyle="light-content" />
-        {RobotoFontsLoaded && RalewayFontsLoaded && <Slot />}
-      </View>
+      <UserProvider>
+        <View style={{ flex: 1 }}>
+          <StatusBar barStyle="light-content" />
+          {RobotoFontsLoaded && RalewayFontsLoaded && <Slot />}
+        </View>
+      </UserProvider>
     </QueryClientProvider>
   );
 };
